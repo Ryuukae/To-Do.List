@@ -4,6 +4,67 @@
     <meta charset="UTF-8">
     <title>To-Do List</title>
     <link rel="stylesheet" href="css/style.css">
+    <script>
+        function addTask() {
+            // Get task input and task list elements
+            const taskInput = document.getElementById("input-task");
+            const taskList = document.getElementById("task-list");
+
+            // Create new task list item
+            const newTask = document.createElement("li");
+
+            // Create checkbox for new task
+            const checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+
+            // Create text span for new task
+            const taskText = document.createElement("span");
+            taskText.className = "task";
+            taskText.textContent = taskInput.value;
+
+            // Create delete button for new task
+            const deleteBtn = document.createElement("button");
+            deleteBtn.className = "delete-btn";
+
+            //Add event listener to the delete button
+            deleteBtn.addEventListener("click", deleteTask);
+
+            // Create image for delete button
+            const img = document.createElement("img");
+            img.src = "https://img.icons8.com/?size=100&id=102550&format=png&color=000000";
+            img.alt = "Delete";
+            deleteBtn.appendChild(img);
+
+            // Assemble new task list item
+            newTask.appendChild(checkbox);
+            newTask.appendChild(taskText);
+            newTask.appendChild(deleteBtn);
+            taskList.appendChild(newTask);
+
+            //Log the new task added
+            console.log("New task added: " + taskInput.value);
+
+            //Clear the input after adding a task
+            taskInput.value = "";
+        }
+
+        function deleteTask(event) {
+            //Find the Task (li) to delete.
+            let taskToDelete = event.target;
+            while (taskToDelete.tagName !== 'LI') {
+                taskToDelete = taskToDelete.parentElement;
+            }
+
+            //Log before deleting
+            console.log("Deleting task: " + taskToDelete.innerText);
+
+            //Delete the task.
+            taskToDelete.remove();
+
+            //Log successful deletion
+            console.log("Task deleted successfully")
+        }
+    </script>
 </head>
 <body>
 <div id="header_div">
@@ -11,7 +72,7 @@
 </div>
 <div id="input-task-div">
     <input type="text" id="input-task">
-    <button id="add-task-button">Add Task</button>
+    <button id="add-task-button" onclick="addTask()">Add Task</button>
 </div>
 <div id="task-list-div">
     <ul id="task-list">
