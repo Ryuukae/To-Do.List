@@ -10,15 +10,16 @@ A simple to-do list application built using HTML, CSS, and vanilla JavaScript. T
 - **Persistent Storage**: Tasks are saved to `localStorage`.
 
 ## File Structure
-├── task/
-│   ├── src/
-│       ├── index.html
-│       ├── css/
-│           └── style.css
-│       ├── fonts/
-│           ├── Caveat-Regular.ttf
-│           └── tangerine-regular.ttf
-├── README.md
+
+- **task/**
+  - **src/**
+    - `index.html`
+    - **css/**
+      - `style.css`
+    - **fonts/**
+      - `Caveat-Regular.ttf`
+      - `tangerine-regular.ttf`
+- `README.md`
 
 ## Getting Started
 
