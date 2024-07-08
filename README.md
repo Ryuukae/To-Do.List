@@ -31,8 +31,8 @@ A simple to-do list application built using HTML, CSS, and vanilla JavaScript. T
 
 1. **Clone the repository**:
     ```sh
-    git clone https://github.com/your-username/to-do-list-js.git
-    cd to-do-list-js
+    git clone https://github.com/Ryuukae/To-Do.List.git
+    cd To-Do.List
     ```
 
 2. **Open `index.html` in your browser**:
@@ -60,7 +60,7 @@ Feel free to make a pull request or open an issue to contribute to the project.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the Apache 2.0 License - see the [LICENSE.md](LICENSE.md) file for details.
 
 ## Acknowledgments
 
