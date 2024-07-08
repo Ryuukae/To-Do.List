@@ -6,46 +6,54 @@
     <link rel="stylesheet" href="css/style.css">
     <script>
         function addTask() {
+
             // Get task input and task list elements
             const taskInput = document.getElementById("input-task");
             const taskList = document.getElementById("task-list");
 
-            // Create new task list item
-            const newTask = document.createElement("li");
+            //check if taskInput is empty
+            if (taskInput.value === "") {
+                alert("Please enter a task!");
+                return;
+            } else {
 
-            // Create checkbox for new task
-            const checkbox = document.createElement("input");
-            checkbox.type = "checkbox";
+                // Create new task list item
+                const newTask = document.createElement("li");
 
-            // Create text span for new task
-            const taskText = document.createElement("span");
-            taskText.className = "task";
-            taskText.textContent = taskInput.value;
+                // Create checkbox for new task
+                const checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
 
-            // Create delete button for new task
-            const deleteBtn = document.createElement("button");
-            deleteBtn.className = "delete-btn";
+                // Create text span for new task
+                const taskText = document.createElement("span");
+                taskText.className = "task";
+                taskText.textContent = taskInput.value;
 
-            //Add event listener to the delete button
-            deleteBtn.addEventListener("click", deleteTask);
+                // Create delete button for new task
+                const deleteBtn = document.createElement("button");
+                deleteBtn.className = "delete-btn";
 
-            // Create image for delete button
-            const img = document.createElement("img");
-            img.src = "https://img.icons8.com/?size=100&id=102550&format=png&color=000000";
-            img.alt = "Delete";
-            deleteBtn.appendChild(img);
+                //Add event listener to the delete button
+                deleteBtn.addEventListener("click", deleteTask);
 
-            // Assemble new task list item
-            newTask.appendChild(checkbox);
-            newTask.appendChild(taskText);
-            newTask.appendChild(deleteBtn);
-            taskList.appendChild(newTask);
+                // Create image for delete button
+                const img = document.createElement("img");
+                img.src = "https://img.icons8.com/?size=100&id=102550&format=png&color=000000";
+                img.alt = "Delete";
+                deleteBtn.appendChild(img);
 
-            //Log the new task added
-            console.log("New task added: " + taskInput.value);
+                // Assemble new task list item
+                newTask.appendChild(checkbox);
+                newTask.appendChild(taskText);
+                newTask.appendChild(deleteBtn);
+                taskList.appendChild(newTask);
 
-            //Clear the input after adding a task
-            taskInput.value = "";
+                //Log the new task added
+                console.log("New task added: " + taskInput.value);
+
+                //Clear the input after adding a task
+                taskInput.value = "";
+            }
         }
 
         function deleteTask(event) {

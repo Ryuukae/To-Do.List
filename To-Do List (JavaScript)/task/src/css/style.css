@@ -1,3 +1,12 @@
+#task-list li input[type="checkbox"]:checked + span.task {
+    text-decoration: line-through;
+    text-decoration-color: greenyellow;
+}
+
+#task-list li input[type="checkbox"]:not(:checked) + span.task {
+    text-decoration: none;
+}
+
 body {
     background-color: #0f0f0f;
 }
@@ -69,6 +78,14 @@ body {
     margin-left: 5px;
     text-align: center;
     height: 30px;
+    transition: border-bottom-color 0.2s ease-in-out;
+}
+
+#add-task-button:hover {
+    background-color: #363636;
+    color: white;
+    border-bottom: 1px solid greenyellow;
+    border-left: 2px solid greenyellow;
 }
 
 #task-list {
@@ -85,6 +102,7 @@ body {
     border: 1px solid #ccc;
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 
 #task-list li input[type="checkbox"] {
@@ -94,6 +112,13 @@ body {
 #task-list li span {
     flex-grow: 1;
     color: white;
+    white-space: normal;
+    overflow-wrap: break-word;
+    overflow: hidden;
+}
+
+#task-list li button.delete-btn:hover {
+    background-color: lightcoral;
 }
 
 #task-list li button.delete-btn {
@@ -101,6 +126,11 @@ body {
     width: 30px;
     height: 20px;
     margin-right: 5px;
+}
+
+#task-list li button.delete-btn:hover img {
+    background-color: lightcoral;
+    opacity: 1;
 }
 
 #task-list li button.delete-btn img {
