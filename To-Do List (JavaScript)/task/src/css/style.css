@@ -1,21 +1,23 @@
-#task-list li input[type="checkbox"]:checked + span.task {
-    text-decoration: line-through;
-    text-decoration-color: greenyellow;
-}
-
-#task-list li input[type="checkbox"]:not(:checked) + span.task {
-    text-decoration: none;
-}
 
 body {
     background-color: #0f0f0f;
+}
+
+#header_div {
+    border-bottom: 1px solid white;
+    margin-right: 35%;
+    margin-left: 35%;
+    height: 75px;
 }
 
 #h1 {
     text-align: center;
     font-family: 'tangerine-cursive', cursive;
     color: white;
-    font-size: 50px;
+    font-size: 54px;
+    border-bottom: 1px solid white;
+    margin-right: 5%;
+    margin-left: 5%;
 }
 
 #input-task-div {
@@ -25,7 +27,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 955px;
+    width: 967px;
 }
 
 #task-list-div {
@@ -42,6 +44,7 @@ body {
 }
 
 #input-task {
+    font-family: 'tangerine-cursive', cursive;
     flex-grow: 9;
     height: 40px;
     margin: auto;
@@ -57,7 +60,7 @@ body {
     color: white;
     text-align: center;
     outline: none;
-    font-size: 24px;
+    font-size: 26px;
 }
 
 #add-task-button {
@@ -109,12 +112,22 @@ body {
     margin-right: 10px;
 }
 
+#task-list li input[type="checkbox"]:checked + span.task {
+    text-decoration: line-through;
+    text-decoration-color: greenyellow;
+}
+
+#task-list li input[type="checkbox"]:not(:checked) + span.task {
+    text-decoration: none;
+}
+
 #task-list li span {
     flex-grow: 1;
     color: white;
     white-space: normal;
     overflow-wrap: break-word;
     overflow: hidden;
+    font-size: 16px;
 }
 
 #task-list li button.delete-btn:hover {
