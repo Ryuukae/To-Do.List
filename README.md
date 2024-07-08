@@ -20,6 +20,7 @@ A simple to-do list application built using HTML, CSS, and vanilla JavaScript. T
       - `Caveat-Regular.ttf`
       - `tangerine-regular.ttf`
 - `README.md`
+- `LICENSE.md`
 
 ## Getting Started
 
