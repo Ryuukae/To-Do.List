@@ -1,11 +1,3 @@
-#task-list li input[type="checkbox"]:checked + span.task {
-    text-decoration: line-through;
-    text-decoration-color: greenyellow;
-}
-
-#task-list li input[type="checkbox"]:not(:checked) + span.task {
-    text-decoration: none;
-}
 
 body {
     background-color: #0f0f0f;
@@ -107,6 +99,15 @@ body {
 
 #task-list li input[type="checkbox"] {
     margin-right: 10px;
+}
+
+#task-list li input[type="checkbox"]:checked + span.task {
+    text-decoration: line-through;
+    text-decoration-color: greenyellow;
+}
+
+#task-list li input[type="checkbox"]:not(:checked) + span.task {
+    text-decoration: none;
 }
 
 #task-list li span {
