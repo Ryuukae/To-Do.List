@@ -1,4 +1,7 @@
 # To-Do List (JavaScript)
+![To-Do List](https://github.com/user-attachments/assets/8298349f-8b69-4ba2-9177-7f348d33b612)
+
+## About
 
 A simple to-do list application built using HTML, CSS, and vanilla JavaScript. The application allows you to add, delete, and mark tasks as completed. Tasks are saved to `localStorage` so they persist even after the page is refreshed.
 
@@ -48,16 +51,9 @@ A simple to-do list application built using HTML, CSS, and vanilla JavaScript. T
     - Click the delete button (trash icon) to remove a task.
     - Tasks will be saved automatically to `localStorage`.
 
-## Customization
-
-### Styles
-
-- You can customize the styles in `css/style.css`.
-- Fonts can be changed by replacing the font files in `fonts/`.
-
 ## Contributing
 
-Feel free to make a pull request or open an issue to contribute to the project.
+Feel free to make a pull request or open an issue to contribute to the project, but as this repo is a guided project, it is not actively maintained.
 
 ## License
 
